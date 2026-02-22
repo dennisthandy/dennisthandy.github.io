@@ -119,8 +119,11 @@
               <p>Simpan rencana bulanan dan pantau performa agar disiplin tetap terukur dari waktu ke waktu.</p>
             </div>
             <!-- Clipping viewport for horizontal slide -->
-            <div>
-            <div class="feature-viewport">
+            <div class="slider-wrapper">
+              <button class="slider-arrow slider-arrow--prev" aria-label="Fitur sebelumnya" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <div class="feature-viewport">
               <div class="feature-grid">
 
                 <article class="card feature-row">
@@ -198,7 +201,10 @@
                 </article>
 
               </div>
-            </div>
+              </div>
+              <button class="slider-arrow slider-arrow--next" aria-label="Fitur berikutnya">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
               <div class="slider-dots" role="tablist" aria-label="Navigasi slide fitur">
                 <button class="slider-dot is-active" role="tab" aria-selected="true"  aria-label="Slide 1" data-index="0"></button>
                 <button class="slider-dot"           role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button>

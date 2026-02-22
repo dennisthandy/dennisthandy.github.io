@@ -596,26 +596,31 @@ h2 {
   border-radius: 4px;
 }
 
-/* Arrow buttons */
+/* Slider wrapper — positions arrows on left/right of viewport */
+.slider-wrapper {
+  position: relative;
+}
+
+/* Arrow buttons — hidden by default on desktop (scroll-jacking used instead) */
 .slider-arrows {
   display: none;
   gap: 0.5rem;
 }
 
 .slider-arrow {
-  display: flex;
+  display: none; /* shown via mobile override below */
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--accent);
   cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   transition:
     background 0.2s,
-    border-color 0.2s,
     color 0.2s,
     transform 0.2s,
     opacity 0.2s;
@@ -900,6 +905,42 @@ h2 {
     text-align: left;
   }
 
+  /* ── Slider arrows: floating left/right on mobile ── */
+  .slider-wrapper {
+    position: relative;
+  }
+
+  .slider-arrow {
+    display: flex; /* show arrows on mobile */
+    position: absolute;
+    top: 38%; /* centre over the image area */
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .slider-arrow--prev {
+    left: -8px;
+  }
+
+  .slider-arrow--next {
+    right: -8px;
+  }
+
+  .slider-arrow:hover:not(:disabled) {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .slider-arrow:active:not(:disabled) {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .slider-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
   /* Keep dots visible on mobile for navigation */
   .slider-dots {
     margin-top: 1.25rem;
@@ -985,7 +1026,7 @@ h2 {
 
   /* Feature images portrait-friendly */
   .feature-visual img {
-    max-height: 424px;
+    max-height: 448px;
   }
 
   /* CTA section */
