@@ -1,168 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Dennis Thandy | Personal Portofolio</title>
-  <link rel="stylesheet" href="./public/css/style.css" />
- </head>
- <body class="light">
-  <div class="theme theme__night"></div>
-  <div class="container">
-   <nav class="nav">
-    <div class="nav__logo">
-     <strong class="first--name">Dennis</strong
-     ><span class="last--name">Thandy</span>
-    </div>
-    <ul class="nav__navbar">
-     <li class="nav__item">
-      <a href="#intro" class="nav__link">Introduction</a>
-     </li>
-     <li class="nav__item">
-      <a href="#skill" class="nav__link">Skill</a>
-     </li>
-     <li class="nav__item">
-      <a href="#project" class="nav__link">Project</a>
-     </li>
-    </ul>
-   </nav>
-   <div class="wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
-     <path
-      fill="#6c63ff"
-      fill-opacity="1"
-      d="M0,192L30,176C60,160,120,128,180,144C240,160,300,224,360,218.7C420,213,480,139,540,122.7C600,107,660,149,720,160C780,171,840,149,900,133.3C960,117,1020,107,1080,96C1140,85,1200,75,1260,85.3C1320,96,1380,128,1410,144L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
-     ></path>
-    </svg>
-   </div>
-   <main>
-    <img
-     src="./public/assets/img/circle-tirangle.svg"
-     alt=""
-     class="decoration decoration--cirle-triangle-one"
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KunciGaji | Gaji Masuk. Uang Terkontrol.</title>
+    <meta
+      name="description"
+      content="KunciGaji adalah sistem disiplin finansial 30 menit pertama setelah gajian agar pengeluaran lebih terkontrol, terukur, dan konsisten tiap bulan."
     />
-    <img
-     src="./public/assets/img/circle-tirangle.svg"
-     alt=""
-     class="decoration decoration--cirle-triangle-two"
+    <meta
+      name="keywords"
+      content="KunciGaji, manajemen gaji, budgeting, disiplin finansial, aplikasi keuangan"
     />
-    <img
-     src="./public/assets/img/circle-tirangle.svg"
-     alt=""
-     class="decoration decoration--cirle-triangle-three"
+    <meta name="author" content="KunciGaji" />
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KunciGaji | Gaji Masuk. Uang Terkontrol." />
+    <meta
+      property="og:description"
+      content="30 menit pertama setelah gajian menentukan kondisi finansialmu bulan ini. Gunakan sistem KunciGaji agar uang tetap terarah."
     />
-    <img
-     src="./public/assets/img/circle-tirangle.svg"
-     alt=""
-     class="decoration decoration--cirle-triangle-four"
-    />
-    <!-- intro section -->
-    <div class="intro" id="intro">
-     <div class="intro__info">
-      <img
-       src="./public/assets/img/me.png"
-       alt="front-end"
-       class="intro__profile"
-      />
-      <div class="intro__text">
-       <h1 class="intro__title">Web Developer</h1>
-       <h2 class="intro__subtitle">Welcome to my personal portofolio</h2>
+    <meta property="og:image" content="./public/assets/img/kunci_gaji/feature.png" />
+    <meta property="og:url" content="https://dennisthandy.github.io/" />
+    <meta property="og:site_name" content="KunciGaji" />
+
+    <link rel="icon" type="image/png" href="./public/assets/icon/icon.png" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div>
+          <img src="./public/assets/icon/icon.png" alt="KunciGaji Logo" />
+          <a class="brand" href="#hero" aria-label="KunciGaji Home"><span>Kunci</span><span>Gaji</span>
+        </div>
+        </a>
+        <ul class="nav-links" aria-label="Menu Utama">
+          <li><a href="#problem">Masalah</a></li>
+          <li><a href="#how-it-works">Cara Kerja</a></li>
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
       </div>
-     </div>
-     <p class="intro__desc">
-      Hello there, I'm Dennis who likes computer technology such as web
-      application development, games, programming and other interesting
-      technologies to find out. I am currently exploring web application
-      development technology specifically in the front-end web development
-      section. My big dream is now to be a professional front-end web developer.
-     </p>
-     <div class="intro__gallery">
-      <img
-       src="./public/assets/img/undraw_responsive_6c8s.svg"
-       alt=""
-       class="intro__img"
-      />
-      <img
-       src="./public/assets/img/undraw_static_website_0107.svg"
-       alt=""
-       class="intro__img"
-      />
-     </div>
-    </div>
-    <!-- end of intro section -->
-    <hr />
-    <!-- skill section -->
-    <div class="skill" id="skill">
-     <h3 class="skill__text">Here some skills and knowlege I've got:</h3>
-     <div class="skill__container"></div>
-    </div>
-    <!-- end of skill section -->
-    <hr />
-    <!-- project section -->
-    <div class="project" id="project">
-     <h3 class="project__text">
-      Here are some projects I've already working on:
-     </h3>
-     <div class="project__container"></div>
-    </div>
-    <!-- end of project section -->
-    <hr />
-    <div class="contact">
-     <h3 class="contact__text">Contact me:</h3>
-     <p class="contact__desc">
-      If you need to contact me for business needs or if you have questions
-      please
-      <a href="mailto:dennisthandy15@gmail.com" class="contact__email"
-       >email me</a
-      >. I will respond as much as possible.
-     </p>
-    </div>
-   </main>
-   <div class="wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
-     <path
-      fill="#6c63ff"
-      fill-opacity="1"
-      d="M0,192L30,176C60,160,120,128,180,144C240,160,300,224,360,218.7C420,213,480,139,540,122.7C600,107,660,149,720,160C780,171,840,149,900,133.3C960,117,1020,107,1080,96C1140,85,1200,75,1260,85.3C1320,96,1380,128,1410,144L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-     ></path>
-    </svg>
-   </div>
-   <footer class="footer">
-    <div class="footer__">
-     Made with ❤️ by Dennis Thandy
-    </div>
-    <ul class="footer__social social">
-     <li class="social__item">
-      <a href="https://codepen.io/dennisthandy" class="social__link">
-       <img
-        src="./public/assets/icon/codepen.svg"
-        alt="codepen"
-        class="social__icon"
-       />
-      </a>
-     </li>
-     <li class="social__item">
-      <a href="https://www.instagram.com/dennisthandy/" class="social__link">
-       <img
-        src="./public/assets/icon/instagram.svg"
-        alt="instagram"
-        class="social__icon"
-       />
-      </a>
-     </li>
-     <li class="social__item">
-      <a href="https://github.com/dennisthandy" class="social__link">
-       <img
-        src="./public/assets/icon/github.svg"
-        alt="github"
-        class="social__icon"
-       />
-      </a>
-     </li>
-    </ul>
-   </footer>
-  </div>
-  <script src="./public/js/script.js" charset="utf-8"></script>
- </body>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="badge" aria-label="Tagline Aplikasi">Sistem Disiplin Finansial Bulanan</p>
+            <h1>Gaji Masuk.<br> <span style="color:var(--accent);">Uang Terkontrol.</span></h1>
+            <p class="lead">
+              30 menit pertama setelah gajian menentukan arah finansialmu sepanjang bulan.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-outline" href="#final-cta" aria-label="Download aplikasi di Play Store">Download Sekarang
+                <img src="./public/assets/icon/google-play-icon.svg" alt="Download di Play Store" loading="eager">
+              </a>
+              <a class="text-link" href="#how-it-works">Pelajari Cara Kerjanya</a>
+            </div>
+          </div>
+          <div class="hero-media reveal">
+            <img
+              src="./public/assets/img/kunci_gaji/feature.png"
+              alt="Tampilan fitur utama aplikasi KunciGaji"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="problem section">
+        <div class="container reveal">
+          <h2>Kebanyakan orang tidak kekurangan uang. <br>
+          <span>Mereka kekurangan sistem.</span></h2>
+          <p>
+            Setelah gajian, keputusan finansial sering diambil cepat tanpa struktur. Pola ini membuat
+            pengeluaran sulit dipantau dan tekanan finansial berulang tiap bulan. KunciGaji membantu kamu
+            memulai dengan langkah yang rapi, rasional, dan konsisten.
+          </p>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how section">
+        <div class="container reveal">
+          <h2>Cara Kerja dalam <span style="color:var(--accent);">3 Langkah</span></h2>
+          <p>
+            Hanya butuh 30 menit setelah gajian untuk membuat satu bulan terasa lebih tenang.
+          </p>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Isi Total Gaji Bulan Ini</h3>
+              <p>Masukkan nominal gaji agar perencanaan dimulai dari angka nyata, bukan asumsi.</p>
+            </article>
+            <article class="card">
+              <h3>Aplikasi Otomatis Membagi</h3>
+              <ul class="list" aria-label="Skema pembagian finansial">
+                <li>Kebutuhan Dasar (maks 60%)</li>
+                <li>Masa Depan (min 20%)</li>
+                <li>Senang-Senang (maks 20%)</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Simpan &amp; Kunci</h3>
+              <p>Simpan rencana bulanan dan pantau performa agar disiplin tetap terukur dari waktu ke waktu.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features section features-slider">
+        <div class="features-sticky">
+          <div class="container reveal reveal-features">
+            <div class="features-header">
+              <h2>Sistem yang Membantumu <span style="color:var(--accent);">Konsisten</span></h2>
+              <p>Simpan rencana bulanan dan pantau performa agar disiplin tetap terukur dari waktu ke waktu.</p>
+            </div>
+            <!-- Clipping viewport for horizontal slide -->
+            <div>
+            <div class="feature-viewport">
+              <div class="feature-grid">
+
+                <article class="card feature-row">
+                  <div class="feature-visual">
+                    <img
+                      src="./public/assets/img/kunci_gaji/dashboard.jpg"
+                      alt="Dashboard pembagian keuangan 60 20 20"
+                      loading="lazy"
+                      width="800"
+                      height="500"
+                    />
+                  </div>
+                  <div class="feature-copy">
+                    <h3>Sistem 60/20/20 Adaptif</h3>
+                    <p>
+                      Pembagian otomatis yang tetap fleksibel mengikuti kondisi pendapatan dan prioritas bulananmu.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="card feature-row">
+                  <div class="feature-visual">
+                    <img
+                      src="./public/assets/img/kunci_gaji/score.jpg"
+                      alt="Visual skor finansial KunciGaji"
+                      loading="lazy"
+                      width="800"
+                      height="500"
+                    />
+                  </div>
+                  <div class="feature-copy">
+                    <h3>Skor Finansial (0–100)</h3>
+                    <p>
+                      Nilai ringkas untuk melihat kualitas disiplin finansialmu secara objektif dari bulan ke bulan.
+                    </p>
+                  </div>
+
+                </article>
+
+                <article class="card feature-row">
+                  <div class="feature-visual">
+                    <img
+                      src="./public/assets/img/kunci_gaji/performance.jpg"
+                      alt="Grafik statistik performa enam bulan terakhir"
+                      loading="lazy"
+                      width="800"
+                      height="500"
+                    />
+                  </div>
+                  <div class="feature-copy">
+                    <h3>Statistik 6 Bulan Terakhir</h3>
+                    <p>
+                      Riwayat performa ditampilkan secara ringkas supaya evaluasi keputusan finansial lebih mudah.
+                    </p>
+                  </div>
+
+                </article>
+
+                <article class="card feature-row">
+                  <div class="feature-visual">
+                    <img
+                      src="./public/assets/img/kunci_gaji/setting.jpg"
+                      alt="Ilustrasi data lokal tanpa server"
+                      loading="lazy"
+                      width="900"
+                      height="560"
+                    />
+                  </div>
+                  <div class="feature-copy">
+                    <h3>Data Disimpan Lokal</h3>
+                    <p>
+                      Data tidak dikirim ke server eksternal. Privasi tetap di perangkatmu dengan akses yang cepat.
+                    </p>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+              <div class="slider-dots" role="tablist" aria-label="Navigasi slide fitur">
+                <button class="slider-dot is-active" role="tab" aria-selected="true"  aria-label="Slide 1" data-index="0"></button>
+                <button class="slider-dot"           role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button>
+                <button class="slider-dot"           role="tab" aria-selected="false" aria-label="Slide 3" data-index="2"></button>
+                <button class="slider-dot"           role="tab" aria-selected="false" aria-label="Slide 4" data-index="3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-cta" class="final-cta section">
+        <div class="container reveal">
+          <h2>Mulai Atur Gajimu Bulan Ini.</h2>
+          <p>Bangun kebiasaan finansial yang stabil dimulai dari 30 menit pertama setelah gajian.</p>
+          <a class="btn btn-primary" href="#" aria-label="Download aplikasi KunciGaji sekarang">Download Sekarang <img src="./public/assets/icon/google-play-icon.svg" alt="Download di Play Store" loading="eager"></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p style="color: var(--accent);">© 2026 KunciGaji. Sistem finansial yang tenang, terstruktur, dan konsisten.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
 </html>
