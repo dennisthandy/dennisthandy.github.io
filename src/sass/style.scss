@@ -261,7 +261,7 @@ h2 {
   line-height: 1.2;
   letter-spacing: -0.025em;
   max-width: 16ch;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero-actions {
@@ -515,7 +515,7 @@ h2 {
   gap: 0.55rem;
   align-items: center;
   justify-content: center;
-  flex: 1,
+  flex: 1;
 }
 
 .feature-index {
@@ -701,9 +701,100 @@ h2 {
 }
 
 /* ═══════════════════════════════════════════════════
-   MOBILE — disable scroll-jacking, linear stack
+   TABLET — 768px and below
    ═══════════════════════════════════════════════════ */
 @media (max-width: 919px) {
+
+  /* ── Navigation ── */
+  .nav {
+    flex-wrap: wrap;
+    padding: 0.75rem 0;
+    gap: 0.5rem;
+  }
+
+  .nav div:first-child {
+    flex: 1;
+  }
+
+  .nav div img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* ── Hero ── */
+  .hero-grid {
+    flex-direction: column-reverse;
+    padding: 3rem 0 2.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-grid h1 {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-media img {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* ── Problem ── */
+  .problem {
+    padding-bottom: 3.5rem;
+  }
+
+  .problem h2 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    line-height: 1.35;
+  }
+
+  .problem p,
+  .how > div > p,
+  .features-header p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 1.25rem auto;
+  }
+
+  /* ── How it works ── */
+  .how {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  /* ── Features slider → linear stack ── */
   .features-slider {
     min-height: auto;
   }
@@ -713,11 +804,30 @@ h2 {
     height: auto;
     display: block;
     overflow: visible;
+    top: auto;
+  }
+
+  /* Reset reveal-features flex so it stacks vertically */
+  .reveal-features {
+    display: block;
+  }
+
+  .features-header {
+    max-width: 100%;
+    padding-top: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .features-header p {
+    text-align: center;
   }
 
   .feature-viewport {
     overflow: visible;
     border: none;
+    width: 100%;
+    margin-top: 1.5rem;
   }
 
   .feature-viewport::before {
@@ -726,37 +836,135 @@ h2 {
 
   .feature-grid {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     transform: none !important;
     transition: none;
   }
 
   .feature-row {
     min-width: 100%;
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-right: 0;
     padding: 1.4rem;
+    background: linear-gradient(165deg, #ffffff 0%, #f5fbf8 100%);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
   }
 
   .feature-visual img {
-    height: 200px;
+    height: auto;
+    max-height: 260px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+  }
+
+  .feature-copy {
+    align-items: flex-start;
+  }
+
+  .feature-copy > p {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .slider-dots {
+    margin-top: 1.5rem;
   }
 
   .features-hint { display: none; }
   .slider-nav    { display: none; }
-  .hero-grid     { grid-template-columns: 1fr; }
-  .grid-3        { grid-template-columns: 1fr; }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    font-size: 0.9rem;
+  /* ── CTA & footer spacing ── */
+  .final-cta {
+    margin: 3rem 0;
+  }
+
+  .privacy {
+    margin: 3rem 0;
   }
 }
 
-@media (max-width: 620px) {
-  .hero-actions .btn {
+/* ═══════════════════════════════════════════════════
+   MOBILE — 480px and below
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /* Tighter container */
+  .container {
+    width: 92vw;
+  }
+
+  /* Nav: reduce logo size, links scroll horizontally if needed */
+  .nav div img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    font-size: 0.8rem;
+    gap: 0.4rem 0.75rem;
+  }
+
+  /* Hero full-width CTAs */
+  .hero-actions {
+    flex-direction: column;
     width: 100%;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .text-link {
+    width: 100%;
+    justify-content: center;
     text-align: center;
+  }
+
+  .hero-media img {
+    max-width: 100%;
+  }
+
+  /* Typography scale down */
+  h2 {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .badge {
+    font-size: 0.72rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Cards more compact */
+  .card {
+    padding: 1.25rem;
+  }
+
+  /* Feature images portrait-friendly */
+  .feature-visual img {
+    max-height: 220px;
+  }
+
+  /* CTA section */
+  .final-cta .container {
+    padding: 2rem 1.25rem;
+  }
+
+  .final-cta h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 1.25rem 0;
   }
 }
