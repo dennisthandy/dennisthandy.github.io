@@ -1,12 +1,11 @@
-@charset "UTF-8";
 :root {
-  --bg: #FCE7F3;
+  --bg: #fce7f3;
   --surface: #ffffff;
   --text: #14231a;
   --muted: #4c5b52;
-  --primary: #F9A8D4;
-  --accent: #EC4899;
-  --accent-dark: #BE185D;
+  --primary: #f9a8d4;
+  --accent: #ec4899;
+  --accent-dark: #be185d;
   --line: #d9e4dc;
   --highlight: #f4b345;
   --radius: 18px;
@@ -24,7 +23,12 @@ html {
 
 body {
   font-family: "Manrope", sans-serif;
-  background: radial-gradient(circle at 10% 10%, #f0f6ef 0%, #f6f8f4 35%, #eef5f1 100%);
+  background: radial-gradient(
+    circle at 10% 10%,
+    #f0f6ef 0%,
+    #f6f8f4 35%,
+    #eef5f1 100%
+  );
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
@@ -130,7 +134,10 @@ a {
   padding: 0.72rem 1.4rem;
   font-weight: 700;
   font-size: 0.92rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
   cursor: pointer;
   border: none;
 }
@@ -196,7 +203,9 @@ main {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
   transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -334,7 +343,6 @@ h2 {
   padding-top: 2rem;
   padding-bottom: 10rem;
 }
-
 .how h2 {
   text-align: center;
 }
@@ -409,6 +417,7 @@ h2 {
              .feature-row×4  — each slide, min-width:100%
          .slider-nav         — dots + arrows
 */
+
 .features-slider {
   --slide-count: 4;
   /* Reserve vertical scroll space: one "page" per slide */
@@ -553,6 +562,7 @@ h2 {
 }
 
 /* ── Slider navigation ─────────────────────────────── */
+
 /* Dots */
 .slider-dots {
   margin-top: 2rem;
@@ -570,7 +580,9 @@ h2 {
   background: var(--line);
   cursor: pointer;
   padding: 0;
-  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s ease;
+  transition:
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s ease;
 }
 
 .slider-dot.is-active {
@@ -601,7 +613,12 @@ h2 {
   background: var(--surface);
   color: var(--text);
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s, opacity 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 .slider-arrow:hover:not(:disabled) {
@@ -643,7 +660,6 @@ h2 {
 .final-cta {
   margin: 8.5rem 0;
 }
-
 .final-cta .container {
   text-align: center;
   background: linear-gradient(145deg, var(--primary) 0%, var(--accent) 100%);
@@ -697,14 +713,17 @@ h2 {
     transform: translateY(0);
   }
 }
+
 @keyframes bounceDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(4px);
   }
 }
+
 /* ═══════════════════════════════════════════════════
    TABLET — 768px and below
    ═══════════════════════════════════════════════════ */
@@ -715,16 +734,20 @@ h2 {
     padding: 0.75rem 0;
     gap: 0.5rem;
   }
+
   .nav div:first-child {
     flex: 1;
   }
+
   .nav div img {
     width: 48px;
     height: 48px;
   }
+
   .brand {
     font-size: 1.4rem;
   }
+
   .nav-links {
     width: 100%;
     flex-wrap: wrap;
@@ -733,6 +756,7 @@ h2 {
     padding: 0.5rem 0 0.75rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
+
   /* ── Hero ── */
   .hero-grid {
     flex-direction: column-reverse;
@@ -740,32 +764,39 @@ h2 {
     gap: 2rem;
     text-align: center;
   }
+
   .hero-grid h1 {
     font-size: clamp(2rem, 6vw, 2.6rem);
     max-width: 100%;
     margin: 0 auto;
   }
+
   .lead {
     font-size: 1.05rem;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
+
   .hero-actions {
     justify-content: center;
   }
+
   .hero-media img {
     max-width: 360px;
     margin: 0 auto;
   }
+
   /* ── Problem ── */
   .problem {
     padding-bottom: 3.5rem;
   }
+
   .problem h2 {
     font-size: clamp(1.4rem, 4vw, 1.9rem);
     line-height: 1.35;
   }
+
   .problem p,
   .how > div > p,
   .features-header p {
@@ -773,20 +804,24 @@ h2 {
     line-height: 1.7;
     margin: 1.25rem auto;
   }
+
   /* ── How it works ── */
   .how {
     padding-top: 1.5rem;
     padding-bottom: 3.5rem;
   }
+
   .grid-3 {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 2rem;
   }
+
   /* ── Features slider → linear stack ── */
   .features-slider {
     min-height: auto;
   }
+
   .features-sticky {
     position: static;
     height: auto;
@@ -794,76 +829,100 @@ h2 {
     overflow: visible;
     top: auto;
   }
+
   /* Reset reveal-features flex so it stacks vertically */
   .reveal-features {
     display: block;
   }
+
   .features-header {
     max-width: 100%;
     padding-top: 2rem;
     text-align: center;
     align-items: center;
   }
+
   .features-header p {
     text-align: center;
   }
+
   .feature-viewport {
-    overflow: visible;
+    overflow: hidden; /* must stay hidden so translateX clips correctly */
     border: none;
     width: 100%;
     margin-top: 1.5rem;
   }
+
   .feature-viewport::before {
     display: none;
   }
+
+  /* Keep .feature-grid as a horizontal flex row so JS translateX works */
   .feature-grid {
-    flex-direction: column;
-    gap: 1.25rem;
-    transform: none !important;
-    transition: none;
+    flex-direction: row;
+    gap: 0;
+    /* Do NOT override transform here — JS drives it */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Each slide — no card chrome, transparent */
   .feature-row {
     min-width: 100%;
     width: 100%;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0;
     margin-right: 0;
-    padding: 1.4rem;
-    background: linear-gradient(165deg, #ffffff 0%, #f5fbf8 100%);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
+
+  /* Full natural image height, no cropping */
   .feature-visual img {
     height: auto;
-    max-height: 260px;
+    max-height: none;
     width: 100%;
-    object-fit: cover;
-    border-radius: calc(var(--radius) - 4px);
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
   }
+
+  /* Text sits below the image with breathing room */
   .feature-copy {
     align-items: flex-start;
+    padding: 1.1rem 0.25rem 0.5rem;
   }
+
   .feature-copy > p {
     max-width: 100%;
     text-align: left;
   }
+
+  /* Keep dots visible on mobile for navigation */
   .slider-dots {
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
+    display: flex;
   }
+
   .features-hint {
     display: none;
   }
   .slider-nav {
     display: none;
   }
+
   /* ── CTA & footer spacing ── */
   .final-cta {
     margin: 3rem 0;
   }
+
   .privacy {
     margin: 3rem 0;
   }
 }
+
 /* ═══════════════════════════════════════════════════
    MOBILE — 480px and below
    ═══════════════════════════════════════════════════ */
@@ -872,63 +931,75 @@ h2 {
   .container {
     width: 92vw;
   }
+
   /* Nav: reduce logo size, links scroll horizontally if needed */
   .nav div img {
     width: 40px;
     height: 40px;
   }
+
   .brand {
     font-size: 1.2rem;
   }
+
   .nav-links {
     font-size: 0.8rem;
     gap: 0.4rem 0.75rem;
   }
+
   /* Hero full-width CTAs */
   .hero-actions {
     flex-direction: column;
     width: 100%;
   }
+
   .hero-actions .btn,
   .hero-actions .text-link {
     width: 100%;
     justify-content: center;
     text-align: center;
   }
+
   .hero-media img {
     max-width: 100%;
   }
+
   /* Typography scale down */
   h2 {
     font-size: clamp(1.3rem, 5vw, 1.7rem);
   }
+
   .lead {
     font-size: 1rem;
   }
+
   .badge {
     font-size: 0.72rem;
     margin-bottom: 1.25rem;
   }
+
   /* Cards more compact */
   .card {
     padding: 1.25rem;
   }
+
   /* Feature images portrait-friendly */
   .feature-visual img {
-    max-height: 220px;
+    max-height: 424px;
   }
+
   /* CTA section */
   .final-cta .container {
     padding: 2rem 1.25rem;
   }
+
   .final-cta h2 {
     font-size: 1.4rem;
   }
+
   /* Footer */
   .site-footer {
     text-align: center;
     padding: 1.25rem 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
